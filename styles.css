@@ -94,6 +94,36 @@ main {
   }
 }
 
+.profile-photo {
+  display: block;
+  margin: 20px auto;
+  border-radius: 50%;
+  max-width: 180px;
+  height: auto;
+  object-fit: cover;
+  border: 4px solid #ccc;
+  transition: transform 0.5s ease-in-out; /* Smooth transition */
+}
+
+.profile-photo:hover {
+  transform: rotateY(20deg) rotateX(10deg) scale(1.05); /* 3D rotation and slight scale */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
+}
+
+/* Optional: Further constrain on smaller screens */
+@media (max-width: 600px) {
+  .profile-photo {
+      max-width: 150px;
+  }
+}
+/* Optional: Further constrain on smaller screens */
+@media (max-width: 600px) {
+  .profile-photo {
+      max-width: 150px; /* Adjust as needed for small screens */
+  }
+}
+
+
 .page {
   display: none;
   animation: fadeInPage 0.5s ease-in-out;
@@ -147,6 +177,87 @@ iframe {
   border-bottom: 2px solid #a5b4fc;
   /* Underline effect */
   padding-bottom: 0.5rem;
+}
+
+
+/* styles.css */
+/* ... (Previous CSS) ... */
+
+/* Downloads Section */
+#downloads h3 {
+  margin-top: 3rem;
+  /* More space above */
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #1a202c;
+  border-bottom: 2px solid #4a5568;
+  /* Darker underline */
+  padding-bottom: 0.75rem;
+}
+
+.downloads-container {
+  display: flex;
+  /* Use flexbox for layout */
+  justify-content: center;
+  /* Center horizontally */
+  gap: 2rem;
+  /* Space between cards */
+  flex-wrap: wrap;
+  /* Wrap on smaller screens */
+}
+
+.download-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 200px;
+  /* Fixed width for cards */
+  padding: 1.5rem;
+  background-color: #edf2f7;
+  /* Light background */
+  border-radius: 0.5rem;
+  color: #2d3748;
+  text-decoration: none;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.download-card i {
+  font-size: 2.5rem;
+  /* Large icons */
+  margin-bottom: 0.75rem;
+  color: #4a5568;
+  /* Icon color */
+}
+
+.download-card span {
+  font-size: 1.25rem;
+  font-weight: 600;
+  /* Bold title */
+  margin-bottom: 0.5rem;
+}
+
+.download-card p {
+  font-size: 0.875rem;
+  color: #718096;
+}
+
+.download-card:hover {
+  transform: translateY(-0.25rem);
+  /* Slight lift on hover */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+#cv-download {
+  background-color: #d1fae5;
+  /* A different background color for emphasis */
+}
+
+#cv-download i {
+  color: #48bb78;
+  /* A different icon color for emphasis */
 }
 
 .experience-list,
