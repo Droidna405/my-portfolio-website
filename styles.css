@@ -1,104 +1,210 @@
 /* styles.css */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom right, #f0f4f8, #dbeafe);
+  color: #1e293b;
+  min-height: 100vh;
+  animation: fadeInBody 1s ease-in;
+}
+
+@keyframes fadeInBody {
+  from {
+      opacity: 0;
   }
-  
-  body {
-    background: linear-gradient(to bottom right, #f0f4f8, #dbeafe);
-    color: #1e293b;
-    min-height: 100vh;
-    animation: fadeInBody 1s ease-in;
+
+  to {
+      opacity: 1;
   }
-  
-  @keyframes fadeInBody {
-    from { opacity: 0; }
-    to { opacity: 1; }
+}
+
+header {
+  background-color: #1e40af;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  animation: slideDown 1s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+      transform: translateY(-50px);
+      opacity: 0;
   }
-  
-  header {
-    background-color: #1e40af;
-    color: white;
-    padding: 2rem;
-    text-align: center;
-    animation: slideDown 1s ease-out;
+
+  to {
+      transform: translateY(0);
+      opacity: 1;
   }
-  
-  @keyframes slideDown {
-    from { transform: translateY(-50px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+nav {
+  background-color: #1e3a8a;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 0;
+  animation: fadeInNav 1s ease-in 0.5s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInNav {
+  to {
+      opacity: 1;
   }
-  
-  header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+  color: #93c5fd;
+  transform: scale(1.05);
+}
+
+main {
+  padding: 3rem;
+  text-align: center;
+  animation: fadeInMain 1s ease-in 0.8s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInMain {
+  to {
+      opacity: 1;
   }
-  
-  header p {
-    font-size: 1.2rem;
-    font-style: italic;
+}
+
+.page {
+  display: none;
+  animation: fadeInPage 0.5s ease-in-out;
+}
+
+.active {
+  display: block;
+}
+
+@keyframes fadeInPage {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
   }
-  
-  nav {
-    background-color: #1e3a8a;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    padding: 1rem 0;
-    animation: fadeInNav 1s ease-in 0.5s forwards;
-    opacity: 0;
+
+  to {
+      opacity: 1;
+      transform: translateY(0);
   }
-  
-  @keyframes fadeInNav {
-    to { opacity: 1; }
-  }
-  
-  nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease, transform 0.2s ease;
-  }
-  
-  nav a:hover {
-    color: #93c5fd;
-    transform: scale(1.05);
-  }
-  
-  main {
-    padding: 3rem;
-    text-align: center;
-    animation: fadeInMain 1s ease-in 0.8s forwards;
-    opacity: 0;
-  }
-  
-  @keyframes fadeInMain {
-    to { opacity: 1; }
-  }
-  
-  .page {
-    display: none;
-    animation: fadeInPage 0.5s ease-in-out;
-  }
-  
-  .active {
-    display: block;
-  }
-  
-  @keyframes fadeInPage {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
-  iframe {
-    max-width: 100%;
-    width: 560px;
-    height: 315px;
-    margin-top: 1rem;
-    border: none;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  }
-  
+}
+
+iframe {
+  max-width: 100%;
+  width: 560px;
+  height: 315px;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Portfolio Section Styles */
+#portfolio {
+  text-align: left;
+  /* Align content within the portfolio section to the left */
+}
+
+#portfolio h2 {
+  font-size: 2.2rem;
+  /* Slightly larger heading */
+  margin-bottom: 1rem;
+  color: #334155;
+}
+
+#portfolio h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #1e40af;
+  /* A bit more prominent */
+  border-bottom: 2px solid #a5b4fc;
+  /* Underline effect */
+  padding-bottom: 0.5rem;
+}
+
+.experience-list,
+.project-grid,
+.skills-list,
+.certifications-list,
+.additional-list {
+  margin-bottom: 2rem;
+}
+
+.experience-item {
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.experience-item h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #1e293b;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project-item {
+  border: 1px solid #e2e8f0;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.project-item h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #1e293b;
+}
+
+.project-item img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  margin-bottom: 0.5rem;
+}
+
+.skills-list ul,
+.certifications-list ul,
+.additional-list ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.skills-list li,
+.certifications-list li,
+.additional-list li {
+  margin-bottom: 0.5rem;
+  color: #475569;
+}
