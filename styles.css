@@ -326,10 +326,57 @@ footer {
   list-style-type: disc;
   margin-left: 20px;
 }
+/* Improved list styles */
+
+
 
 .skills-list li,
 .certifications-list li,
 .additional-list li {
   margin-bottom: 0.5rem;
   color: #475569;
+}
+
+/* Contact Section */
+#contact {
+  text-align: left;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+#contact h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #1a202c;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: #374151;
+  transition: color 0.3s ease;
+}
+
+.contact-item:hover {
+  color: #4c6ef5;
+}
+
+.contact-item i {
+  font-size: 1.5rem;
+  color: #4b5563;
+  width: 2rem; /* Ensure icons have consistent width */
+  text-align: center;
+}
+
+.contact-item span {
+  font-size: 1.1rem;
 }
