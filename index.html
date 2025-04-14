@@ -1,0 +1,58 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Professional Site</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .profile-photo {
+            display: block;
+            margin: 20px auto;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 3px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Joel H. Mwangala</h1>
+        <p>IT Specialist | Tech Enthusiast </p>
+    </header>
+
+    <nav>
+        <a href="#" onclick="showPage('bio')">Bio</a>
+        <a href="#" onclick="showPage('portfolio')">Portfolio</a>
+        <a href="#" onclick="showPage('elevator')">Elevator Pitch</a>
+    </nav>
+
+    <!-- Profile Photo -->
+    <img src="Mwangala's-148.jpg" alt="Profile Photo" class="profile-photo" style="object-fit: cover; width: 180px; height: 180px; border: 4px solid #ccc; margin-top: 20px;">
+
+    <main>
+        <div id="bio" class="page active">
+            <h2>About Me</h2>
+            <p style="text-align: justify; font-size: 2rem; line-height: 1.6; max-width: 100%; word-wrap: break-word;"></p>
+                Joel Mwangala is a tech-savvy IT Support Specialist with a background in Environmental Planning and a Master’s in Strategic Management (ongoing). With over four years of experience, he blends strategic thinking with hands-on tech expertise to solve real-world problems. In his current role in a Christian NGO, Joel built a static website using AWS, HTML, CSS, and JavaScript to streamline access of training material and resources for field users demonstrating his initiative in problem-solving through web design and cloud capability. Certified in IT Support and currently enrolled in ALX’s Cloud Computing program, Joel excels in troubleshooting, cloud infrastructure, and user-focused solutions. He is passionate about leveraging technology to drive meaningful impact and is seeking opportunities in IT support or cloud roles within mission-driven organizations.
+            </p>
+        </div>
+
+        <div id="portfolio" class="page">
+            <h2>Portfolio</h2>
+            <p>Showcase your projects, skills, or case studies here. Include links or images of your work if available.</p>
+        </div>
+
+        <div id="elevator" class="page">
+            <h2>Elevator Pitch</h2>
+            <p>This is a placeholder for your elevator pitch video. Embed your video below:</p>
+            <iframe src="https://www.youtube.com/embed/QIZ_f3XMbxg" title="My Value Proposition/Elevator Pitch Video" allowfullscreen></iframe>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
