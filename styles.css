@@ -1,4 +1,6 @@
 /* styles.css */
+
+/* Reset and General Styles */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -102,27 +104,19 @@ main {
   height: auto;
   object-fit: cover;
   border: 4px solid #ccc;
-  transition: transform 0.5s ease-in-out; /* Smooth transition */
+  transition: transform 0.5s ease-in-out;
 }
 
 .profile-photo:hover {
-  transform: rotateY(20deg) rotateX(10deg) scale(1.05); /* 3D rotation and slight scale */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
+  transform: rotateY(20deg) rotateX(10deg) scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Optional: Further constrain on smaller screens */
 @media (max-width: 600px) {
   .profile-photo {
       max-width: 150px;
   }
 }
-/* Optional: Further constrain on smaller screens */
-@media (max-width: 600px) {
-  .profile-photo {
-      max-width: 150px; /* Adjust as needed for small screens */
-  }
-}
-
 
 .page {
   display: none;
@@ -155,24 +149,21 @@ iframe {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-/* styles.css */
-/* ... (Previous CSS) ... */
-
 /* Improved "About Me" Section */
 #bio {
-  background-color: #f9fafb; /* Light background for the tablet effect */
+  background-color: #f9fafb;
   border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   padding: 2rem;
-  max-width: 80%; /* Adjust width for tablet feel */
-  margin: 2rem auto; /* Center on the page */
-  text-align: left; /* Align text within the "tablet" */
-  transform: perspective(1000px) rotateY(5deg) rotateX(2deg); /* Subtle 3D tilt */
+  max-width: 80%;
+  margin: 2rem auto;
+  text-align: left;
+  transform: perspective(1000px) rotateY(5deg) rotateX(2deg);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 #bio:hover {
-  transform: perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1.02); /* Slight zoom on hover */
+  transform: perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1.02);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
@@ -180,14 +171,14 @@ iframe {
   font-size: 2rem;
   color: #1e293b;
   margin-bottom: 1rem;
-  text-align: center; /* Center the heading within the "tablet" */
+  text-align: center;
 }
 
 #bio p {
-  font-size: 1rem; /* Adjust text size as needed */
+  font-size: 1rem;
   line-height: 1.6;
   color: #374151;
-  word-wrap: break-word; /* Ensure text wraps within the container */
+  word-wrap: break-word;
 }
 
 /* Footer */
@@ -198,17 +189,15 @@ footer {
   color: #4b5563;
   font-size: 0.8rem;
   border-top: 1px solid #e5e7eb;
-}git 
+}
 
 /* Portfolio Section Styles */
 #portfolio {
   text-align: left;
-  /* Align content within the portfolio section to the left */
 }
 
 #portfolio h2 {
   font-size: 2.2rem;
-  /* Slightly larger heading */
   margin-bottom: 1rem;
   color: #334155;
 }
@@ -218,37 +207,25 @@ footer {
   margin-bottom: 1rem;
   font-size: 1.8rem;
   color: #1e40af;
-  /* A bit more prominent */
   border-bottom: 2px solid #a5b4fc;
-  /* Underline effect */
   padding-bottom: 0.5rem;
 }
-
-
-/* styles.css */
-/* ... (Previous CSS) ... */
 
 /* Downloads Section */
 #downloads h3 {
   margin-top: 3rem;
-  /* More space above */
   margin-bottom: 1.5rem;
   font-size: 2rem;
   color: #1a202c;
   border-bottom: 2px solid #4a5568;
-  /* Darker underline */
   padding-bottom: 0.75rem;
 }
 
 .downloads-container {
   display: flex;
-  /* Use flexbox for layout */
   justify-content: center;
-  /* Center horizontally */
   gap: 2rem;
-  /* Space between cards */
   flex-wrap: wrap;
-  /* Wrap on smaller screens */
 }
 
 .download-card {
@@ -258,10 +235,8 @@ footer {
   justify-content: center;
   text-align: center;
   width: 200px;
-  /* Fixed width for cards */
   padding: 1.5rem;
   background-color: #edf2f7;
-  /* Light background */
   border-radius: 0.5rem;
   color: #2d3748;
   text-decoration: none;
@@ -271,16 +246,13 @@ footer {
 
 .download-card i {
   font-size: 2.5rem;
-  /* Large icons */
   margin-bottom: 0.75rem;
   color: #4a5568;
-  /* Icon color */
 }
 
 .download-card span {
   font-size: 1.25rem;
   font-weight: 600;
-  /* Bold title */
   margin-bottom: 0.5rem;
 }
 
@@ -291,18 +263,15 @@ footer {
 
 .download-card:hover {
   transform: translateY(-0.25rem);
-  /* Slight lift on hover */
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 #cv-download {
   background-color: #d1fae5;
-  /* A different background color for emphasis */
 }
 
 #cv-download i {
   color: #48bb78;
-  /* A different icon color for emphasis */
 }
 
 .experience-list,
