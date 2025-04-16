@@ -539,7 +539,7 @@ footer {
 }
 
 .video-item {
-  width: calc(33.33% - 20px); /* Adjust width for the number of videos per row and gap */
+  width: calc(50% - 20px); /* Adjust width for the number of videos per row and gap */
   margin-bottom: 30px; /* Add spacing below each video item */
 }
 
@@ -566,4 +566,21 @@ footer {
   }
   .video-title {
     font-size: 0.8em; /* Adjust font size for smaller screens */
-  }   
+  }
+
+  .video-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.video-item iframe {
+    width: 100%;
+    max-width: 400px;
+    height: 225px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
