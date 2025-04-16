@@ -5,6 +5,17 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+      background: linear-gradient(to bottom right, #1e293b, #334155);
+      color: #f8fafc;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+} 
+
 body {
   background: linear-gradient(to bottom right, #f0f4f8, #dbeafe);
   color: #1e293b;
@@ -53,7 +64,10 @@ header p {
 }
 
 nav {
+  position: sticky;
+  top: 0;
   background-color: #1e3a8a;
+  z-index: 1000;
   display: flex;
   justify-content: center;
   gap: 2rem;
@@ -73,11 +87,16 @@ nav a {
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease, transform 0.2s ease;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #1e40af;
+  transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-  color: #93c5fd;
   transform: scale(1.05);
+  background-color: #93c5fd;
+  color: #1e3a8a;
 }
 
 main {
@@ -118,6 +137,12 @@ main {
 @media (max-width: 600px) {
   .profile-photo {
       max-width: 150px;
+  }
+  header h1 {
+      font-size: 2rem;
+  }
+  .page {
+      padding: 1.5rem;
   }
 }
 
@@ -161,7 +186,7 @@ iframe {
   max-width: 80%;
   margin: 2rem auto;
   text-align: left;
-  transform: perspective(1000px) rotateY(5deg) rotateX(2deg);
+  transform: scale(1.05);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
