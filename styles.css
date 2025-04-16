@@ -202,6 +202,7 @@ iframe {
 #bio {
   background-color: #f9fafb;
   border-radius: 10px;
+  border: #5774a7 0.5px solid;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   padding: 2rem;
   max-width: 80%;
@@ -224,11 +225,20 @@ iframe {
   text-align: center;
 }
 
+p {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Set the default font for all paragraphs */
+  margin-top: 1em; /* Add a default top margin */
+  margin-bottom: 1em; /* Add a default bottom margin */
+}
+
 #bio p {
   font-size: 1rem;
   line-height: 1.6;
   color: #374151;
   word-wrap: break-word;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  text-align: justify; /* This is only applied to paragraphs inside #bio */
 }
 
 /* Footer */
@@ -481,5 +491,37 @@ footer {
   .download-card {
     width: 90%; /* Make cards take up more width on smaller screens */
     margin-bottom: 1rem; /* Add some spacing between stacked cards */
+  }
+}
+
+@media (max-width: 600px) {
+  /* ... other mobile styles ... */
+
+  header {
+    padding: 1.5rem; /* Adjust header padding for smaller screens */
+  }
+
+  header h1 {
+    font-size: 1.8rem; /* Smaller header font */
+    margin-bottom: 0.3rem;
+  }
+
+  header p {
+    font-size: 1rem; /* Smaller subtitle font */
+  }
+
+  nav {
+    flex-direction: column; /* Stack navigation links vertically */
+    align-items: center; /* Center the links */
+    gap: 0.5rem; /* Reduce the gap between links */
+    padding: 1rem; /* Adjust nav padding */
+  }
+
+  nav a {
+    display: block; /* Make each link take full width */
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem 1rem; /* Adjust link padding */
+    border-radius: 0; /* Remove rounded corners if stacking */
   }
 }
