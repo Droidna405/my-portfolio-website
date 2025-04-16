@@ -29,3 +29,6 @@ function copyToClipboard(text) {
     alert('Failed to copy email address.');
   });
 }
+
+document.querySelectorAll('nav a').forEach(link => link.classList.remove('active-nav'));
+document.querySelector(`nav a[onclick="showPage('${pageId}')"]`).classList.add('active-nav');
