@@ -95,7 +95,7 @@ header p {
 nav {
   position: sticky;
   top: 0;
-  background-color: #1e3a8a;
+  background-color: #f8fafc;
   z-index: 1000;
   display: flex;
   justify-content: center;
