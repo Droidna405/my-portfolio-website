@@ -21,6 +21,10 @@ function showPage(pageId) {
   }
 }
 
+document.getElementById('dark-mode-toggle').addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+});
+
 function copyToClipboard(text) {
   navigator.clipboard.writeText(text).then(() => {
     alert('Email address copied to clipboard!'); // Optional feedback
@@ -33,6 +37,3 @@ function copyToClipboard(text) {
 document.querySelectorAll('nav a').forEach(link => link.classList.remove('active-nav'));
 document.querySelector(`nav a[onclick="showPage('${pageId}')"]`).classList.add('active-nav');
 
-document.getElementById('dark-mode-toggle').addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
-});
