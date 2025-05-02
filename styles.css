@@ -46,6 +46,11 @@ body {
   font-family: 'Roboto', sans-serif; /* Modern and professional font */
 }
 
+body.dark-mode {
+  background: #121212; /* Dark background for the body */
+  color: #e0e0e0; /* Light text color */
+}
+
 @keyframes fadeInBody {
   from {
       opacity: 0;
@@ -66,7 +71,7 @@ header {
 }
 
 body.dark-mode header {
-  background-color: #334155;
+  background-color: #1e1e2f; /* Deep midnight blue */
 }
 
 @keyframes slideDown {
@@ -122,14 +127,19 @@ nav a {
 }
 
 body.dark-mode nav a {
-  background-color: #334155;
-  color: #f8fafc;
+  background-color: #1e1e2f; /* Darker nav links */
+  color: #e0e0e0; /* Light text */
 }
 
 nav a:hover {
   background-color: var(--secondary-color);
   color: var(--primary-color);
   transform: scale(1.1);
+}
+
+body.dark-mode nav a:hover {
+  background-color: #b8860b; /* Goldenrod hover */
+  color: #1e1e2f; /* Dark text */
 }
 
 main {
@@ -244,6 +254,12 @@ iframe {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+body.dark-mode #bio {
+  background-color: #1e1e2f; /* Dark background for the About Me section */
+  color: #e0e0e0; /* Light text color */
+  border: 2px solid #b8860b; /* Goldenrod border */
+}
+
 #bio:hover {
   transform: scale(1.02);
   box-shadow: 0 20px 40px rgba(212, 175, 55, 0.5); /* Gold shadow */
@@ -286,6 +302,12 @@ footer {
   padding: 1rem 0;
   border-top: 3px solid var(--secondary-color);
   font-size: 0.9rem;
+}
+
+body.dark-mode footer {
+  background-color: #1e1e2f; /* Match header color */
+  color: #e0e0e0; /* Light text color */
+  border-top: 3px solid #b8860b; /* Goldenrod border */
 }
 
 /* Portfolio Section Styles */
