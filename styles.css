@@ -155,6 +155,13 @@ main {
   width: 100%;
 }
 
+body.dark-mode main {
+  background-color: #1e1e2f; /* Dark background for main content */
+  color: #e0e0e0; /* Light text color */
+  border: 2px solid #b8860b; /* Goldenrod border */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
 @keyframes fadeInMain {
   to {
       opacity: 1;
@@ -370,6 +377,17 @@ body.dark-mode footer {
   text-decoration: none;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+body.dark-mode .download-card {
+  background-color: #2c2c2c; /* Dark card background */
+  color: #e0e0e0; /* Light text */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+body.dark-mode .download-card:hover {
+  background-color: #4b2e83; /* Royal purple hover */
+  color: #d4af37; /* Gold text */
 }
 
 .download-card i {
@@ -672,6 +690,11 @@ section {
   margin-bottom: 3rem;
 }
 
+body.dark-mode section {
+  background-color: #1e1e2f; /* Dark background for sections */
+  color: #e0e0e0; /* Light text color */
+}
+
 .experience-item, .project-item {
   padding: 1.5rem;
   margin-bottom: 1.5rem;
@@ -698,6 +721,9 @@ section {
 }
 
 #dark-mode-toggle {
+  position: fixed; /* Fix the button in place */
+  top: 20px; /* Distance from the top */
+  left: 20px; /* Distance from the left */
   background-color: var(--button-bg);
   color: var(--neutral-color);
   border: 2px solid var(--secondary-color);
@@ -705,6 +731,7 @@ section {
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
+  z-index: 1000; /* Ensure it stays above other elements */
   transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
 }
 
@@ -716,4 +743,9 @@ section {
 
 #dark-mode-toggle:active {
   transform: scale(0.95);
+}
+
+body.dark-mode .video-gallery {
+  background-color: #1e1e2f; /* Dark background */
+  color: #e0e0e0; /* Light text */
 }
