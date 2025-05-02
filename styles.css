@@ -124,6 +124,9 @@ nav a {
   padding: 10px 20px;
   border-radius: 5px;
   transition: transform 0.3s ease, background-color 0.3s ease;
+  font-size: 1rem; /* Reduce font size */
+  padding: 8px 16px; /* Adjust padding */
+  border-radius: 5px;
 }
 
 body.dark-mode nav a {
@@ -140,6 +143,18 @@ nav a:hover {
 body.dark-mode nav a:hover {
   background-color: #b8860b; /* Goldenrod hover */
   color: #1e1e2f; /* Dark text */
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column; /* Stack navigation links vertically */
+    gap: 0.5rem; /* Reduce the gap between links */
+  }
+
+  nav a {
+    width: 90%; /* Make buttons take up most of the width */
+    text-align: center;
+  }
 }
 
 main {
@@ -250,26 +265,16 @@ iframe {
 
 /* Improved "About Me" Section */
 #bio {
-  background-color: var(--neutral-color);
-  border: 2px solid var(--secondary-color);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  padding: 2rem;
-  max-width: 80%;
-  margin: 2rem auto;
-  text-align: left;
+  background-color: var(--primary-color); /* Use a consistent dark background */
+  color: var(--neutral-color); /* Light text for contrast */
+  padding: 1.5rem;
   border-radius: 10px;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
 }
 
 body.dark-mode #bio {
-  background-color: #1e1e2f; /* Dark background for the About Me section */
-  color: #e0e0e0; /* Light text color */
-  border: 2px solid #b8860b; /* Goldenrod border */
-}
-
-#bio:hover {
-  transform: scale(1.02);
-  box-shadow: 0 20px 40px rgba(212, 175, 55, 0.5); /* Gold shadow */
+  background-color: #1e1e2f; /* Darker background for dark mode */
+  color: #e0e0e0; /* Light text */
 }
 
 #bio h2 {
@@ -687,7 +692,8 @@ button.copy-button:hover {
 }
 
 section {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem; /* Reduce spacing for mobile */
+  padding: 1rem;
 }
 
 body.dark-mode section {
@@ -721,16 +727,15 @@ body.dark-mode section {
 }
 
 #dark-mode-toggle {
-  position: fixed; /* Fix the button in place */
+  position: fixed;
   top: 20px; /* Distance from the top */
-  left: 20px; /* Distance from the left */
+  right: 20px; /* Move to the top-right corner */
   background-color: var(--button-bg);
   color: var(--neutral-color);
   border: 2px solid var(--secondary-color);
   padding: 10px 20px;
   border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
+  font-size: 14px; /* Adjust font size for mobile */
   z-index: 1000; /* Ensure it stays above other elements */
   transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
 }
