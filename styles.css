@@ -262,7 +262,11 @@ iframe {
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
-
+.bright-color {
+  color: #ffeb3b; /* Bright yellow */
+  background-color: #ffffff; /* White background */
+  font-weight: bold;
+}
 /* Improved "About Me" Section */
 #bio {
   background-color: var(--primary-color); /* Use a consistent dark background */
