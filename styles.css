@@ -664,3 +664,24 @@ section {
   background-color: var(--secondary-color);
   color: var(--primary-color);
 }
+
+#dark-mode-toggle {
+    background-color: #1e40af;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#dark-mode-toggle:hover {
+    background-color: #3749c7;
+    transform: scale(1.05);
+}
+
+#dark-mode-toggle:active {
+    background-color: #162d7f;
+    transform: scale(0.95);
+}
