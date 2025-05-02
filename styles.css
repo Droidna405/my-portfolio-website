@@ -304,12 +304,14 @@ body.dark-mode #bio {
 }
 
 #bio h2 {
+  background-color: var(--neutral-color); /* Match the background of the bio section */
+  color: var(--text-color); /* Ensure text color matches */
   font-size: 2rem;
-  color: var(--primary-color);
   text-align: center;
   margin-bottom: 1rem;
   border-bottom: 2px solid var(--secondary-color);
-  padding-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 10px; /* Add rounded corners for consistency */
 }
 
 p {
