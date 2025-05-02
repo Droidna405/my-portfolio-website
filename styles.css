@@ -302,11 +302,11 @@ iframe {
 #bio {
   background-color: var(--neutral-color); /* Light background for normal mode */
   color: var(--text-color); /* Dark text for readability */
-  padding: 1.5rem;
+  padding: 1rem; /* Reduce padding for more content width */
   border-radius: 10px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   margin: 1rem auto;
-  max-width: 90%;
+  max-width: 100%; /* Allow full width on smaller screens */
 }
 
 body.dark-mode #bio {
@@ -343,6 +343,10 @@ p {
   #bio p {
     text-align: left; /* Override for smaller screens */
   }
+  #bio {
+    padding: 1rem; /* Adjust padding for smaller screens */
+    max-width: 95%; /* Use most of the screen width */
+  }
 }
 
 /* Footer */
@@ -373,6 +377,19 @@ body.dark-mode footer {
   align-items: center;
   flex-direction: column;
   margin-bottom: 2rem;
+}
+
+#portfolio {
+  max-width: 100%; /* Allow full width on larger screens */
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
+@media (max-width: 600px) {
+  #portfolio {
+    max-width: 95%; /* Use most of the screen width on mobile */
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
 }
 
 #portfolio h2 {
