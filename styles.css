@@ -28,13 +28,23 @@ html {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --primary-color: #1e1e2f; /* Deep midnight blue */
-    --secondary-color: #b8860b; /* Goldenrod */
-    --neutral-color: #121212; /* Dark background */
-    --accent-color: #f5f5f5; /* Light ivory */
-    --text-color: #e0e0e0; /* Soft white */
+    --primary-color: #4b2e83; /* Royal purple */
+    --secondary-color: #d4af37; /* Gold */
+    --neutral-color: #f5f5f5; /* Soft ivory */
+    --accent-color: #2c2c2c; /* Charcoal black */
+    --text-color: #3c3c3c; /* Elegant dark gray */
     --button-bg: #4b2e83; /* Royal purple */
     --button-hover: #d4af37; /* Gold */
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --primary-color: #4b2e83; /* Royal purple */
+    --secondary-color: #d4af37; /* Gold */
+    --neutral-color: #f5f5f5; /* Soft ivory */
+    --accent-color: #2c2c2c; /* Charcoal black */
+    --text-color: #3c3c3c; /* Elegant dark gray */
   }
 }
 
@@ -44,6 +54,9 @@ body {
   min-height: 100vh;
   animation: fadeInBody 1s ease-in;
   font-family: 'Roboto', sans-serif; /* Modern and professional font */
+  font-size: 16px; /* Base font size */
+  background-color: var(--neutral-color) !important;
+  color: var(--text-color) !important;
 }
 
 body.dark-mode {
@@ -117,15 +130,13 @@ header p {
 nav {
   position: sticky;
   top: 0;
-  background-color: var(--neutral-color); /* Neutral background for normal mode */
-  color: var(--text-color);
+  background-color: var(--primary-color); /* Consistent dark background */
+  color: var(--neutral-color);
   z-index: 1000;
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem; /* Adjust gap for better spacing */
   padding: 1rem 0;
-  animation: fadeInNav 1s ease-in 0.5s forwards;
-  opacity: 0;
 }
 
 body.dark-mode nav {
@@ -155,7 +166,7 @@ body.dark-mode nav a {
 }
 
 nav a:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--secondary-color); /* Gold hover effect */
   color: var(--primary-color);
   transform: scale(1.1);
 }
@@ -168,7 +179,7 @@ body.dark-mode nav a:hover {
 @media (max-width: 600px) {
   nav {
     flex-direction: column; /* Stack navigation links vertically */
-    gap: 0.5rem; /* Reduce the gap between links */
+    gap: 0.5rem; /* Reduce gap for smaller screens */
   }
 
   nav a {
@@ -617,6 +628,18 @@ button.copy-button:hover {
 
 @media (max-width: 600px) {
   /* ... other mobile styles ... */
+
+  body {
+    font-size: 14px; /* Slightly smaller font for mobile */
+  }
+
+  header h1 {
+    font-size: 1.8rem; /* Adjust header font size for smaller screens */
+  }
+
+  header p {
+    font-size: 1rem; /* Adjust subtitle font size */
+  }
 
   header {
     padding: 1.5rem; /* Adjust header padding for smaller screens */
