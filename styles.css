@@ -17,23 +17,25 @@ html {
 } 
 
 :root {
-  --primary-color: #1e40af; /* Deep blue */
-  --secondary-color: #93c5fd; /* Light blue */
-  --neutral-color: #f8fafc; /* Light neutral */
-  --accent-color: #1e293b; /* Dark neutral */
-  --text-color: #374151; /* Default text color */
-  --button-bg: #1e40af; /* Button background */
-  --button-hover: #3749c7; /* Button hover */
+  --primary-color: #4b2e83; /* Royal purple */
+  --secondary-color: #d4af37; /* Gold */
+  --neutral-color: #f5f5f5; /* Soft ivory */
+  --accent-color: #2c2c2c; /* Charcoal black */
+  --text-color: #3c3c3c; /* Elegant dark gray */
+  --button-bg: #6a5acd; /* Satin blue */
+  --button-hover: #b8860b; /* Goldenrod */
 }
 
-body.dark-mode {
-  --primary-color: #334155; /* Darker blue */
-  --secondary-color: #1e293b; /* Dark neutral */
-  --neutral-color: #1e293b; /* Dark background */
-  --accent-color: #f8fafc; /* Light text */
-  --text-color: #f8fafc; /* Light text */
-  --button-bg: #374151; /* Button background */
-  --button-hover: #4b5563; /* Button hover */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #334155; /* Darker blue */
+    --secondary-color: #1e293b; /* Dark neutral */
+    --neutral-color: #1e293b; /* Dark background */
+    --accent-color: #f8fafc; /* Light text */
+    --text-color: #f8fafc; /* Light text */
+    --button-bg: #374151; /* Button background */
+    --button-hover: #4b5563; /* Button hover */
+  }
 }
 
 body {
