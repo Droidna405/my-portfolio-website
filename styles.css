@@ -21,19 +21,27 @@ html {
   --secondary-color: #93c5fd; /* Light blue */
   --neutral-color: #f8fafc; /* Light neutral */
   --accent-color: #1e293b; /* Dark neutral */
+  --text-color: #374151; /* Default text color */
+  --button-bg: #1e40af; /* Button background */
+  --button-hover: #3749c7; /* Button hover */
+}
+
+body.dark-mode {
+  --primary-color: #334155; /* Darker blue */
+  --secondary-color: #1e293b; /* Dark neutral */
+  --neutral-color: #1e293b; /* Dark background */
+  --accent-color: #f8fafc; /* Light text */
+  --text-color: #f8fafc; /* Light text */
+  --button-bg: #374151; /* Button background */
+  --button-hover: #4b5563; /* Button hover */
 }
 
 body {
   background: var(--neutral-color);
-  color: var(--accent-color);
+  color: var(--text-color);
   min-height: 100vh;
   animation: fadeInBody 1s ease-in;
   font-family: 'Roboto', sans-serif; /* Modern and professional font */
-}
-
-body.dark-mode {
-  background: #1e293b;
-  color: #f8fafc;
 }
 
 @keyframes fadeInBody {
@@ -666,22 +674,21 @@ section {
 }
 
 #dark-mode-toggle {
-    background-color: #1e40af;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+  background-color: var(--button-bg);
+  color: var(--neutral-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 #dark-mode-toggle:hover {
-    background-color: #3749c7;
-    transform: scale(1.05);
+  background-color: var(--button-hover);
+  transform: scale(1.05);
 }
 
 #dark-mode-toggle:active {
-    background-color: #162d7f;
-    transform: scale(0.95);
+  transform: scale(0.95);
 }
