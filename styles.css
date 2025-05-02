@@ -47,8 +47,24 @@ body {
 }
 
 body.dark-mode {
-  background: #121212; /* Dark background for the body */
-  color: #e0e0e0; /* Light text color */
+  background: #121212; /* Dark background */
+  color: #e0e0e0; /* Light text */
+}
+
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode p, 
+body.dark-mode span {
+  color: #e0e0e0; /* Ensure all text is light in dark mode */
+}
+
+body.dark-mode a {
+  color: #b8860b; /* Goldenrod for links */
+}
+
+body.dark-mode a:hover {
+  color: #d4af37; /* Brighter gold on hover */
 }
 
 @keyframes fadeInBody {
@@ -101,7 +117,8 @@ header p {
 nav {
   position: sticky;
   top: 0;
-  background-color: #f8fafc;
+  background-color: var(--neutral-color); /* Neutral background for normal mode */
+  color: var(--text-color);
   z-index: 1000;
   display: flex;
   justify-content: center;
@@ -109,6 +126,11 @@ nav {
   padding: 1rem 0;
   animation: fadeInNav 1s ease-in 0.5s forwards;
   opacity: 0;
+}
+
+body.dark-mode nav {
+  background-color: #1e1e2f; /* Darker background for dark mode */
+  color: #e0e0e0; /* Light text for dark mode */
 }
 
 @keyframes fadeInNav {
@@ -130,7 +152,7 @@ nav a {
 }
 
 body.dark-mode nav a {
-  background-color: #1e1e2f; /* Darker nav links */
+  background-color: #2c2c2c; /* Darker nav links */
   color: #e0e0e0; /* Light text */
 }
 
@@ -141,8 +163,8 @@ nav a:hover {
 }
 
 body.dark-mode nav a:hover {
-  background-color: #b8860b; /* Goldenrod hover */
-  color: #1e1e2f; /* Dark text */
+  background-color: #4b2e83; /* Royal purple hover */
+  color: #d4af37; /* Gold text */
 }
 
 @media (max-width: 600px) {
@@ -269,18 +291,18 @@ iframe {
 }
 /* Improved "About Me" Section */
 #bio {
-  background-color: var(--primary-color); /* Use a consistent dark background */
-  color: var(--neutral-color); /* Light text for contrast */
+  background-color: var(--neutral-color); /* Light background for normal mode */
+  color: var(--text-color); /* Dark text for readability */
   padding: 1.5rem;
   border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
-  margin: 1rem auto; /* Center the section */
-  max-width: 90%; /* Limit width on mobile */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin: 1rem auto;
+  max-width: 90%;
 }
 
 body.dark-mode #bio {
-  background-color: #1e1e2f; /* Darker background for dark mode */
-  color: #e0e0e0; /* Light text */
+  background-color: #1e1e2f; /* Dark background for dark mode */
+  color: #e0e0e0; /* Light text for dark mode */
 }
 
 #bio h2 {
