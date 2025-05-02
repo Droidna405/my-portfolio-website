@@ -21,9 +21,9 @@ function showPage(pageId) {
   }
 }
 
-document.getElementById('dark-mode-toggle').addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
-});
+// document.getElementById('dark-mode-toggle').addEventListener('click', () => {
+//   document.body.classList.toggle('dark-mode');
+// });
 
 function copyToClipboard(text) {
   navigator.clipboard.writeText(text).then(() => {

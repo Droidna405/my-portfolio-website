@@ -754,17 +754,18 @@ body.dark-mode section {
   color: var(--primary-color);
 }
 
+/*
 #dark-mode-toggle {
   position: fixed;
-  top: 20px; /* Distance from the top */
-  right: 20px; /* Distance from the right */
+  top: 20px;
+  right: 20px;
   background-color: var(--button-bg);
   color: var(--neutral-color);
   border: 2px solid var(--secondary-color);
   padding: 10px 15px;
   border-radius: 5px;
-  font-size: 14px; /* Adjust font size for mobile */
-  z-index: 1000; /* Ensure it stays above other elements */
+  font-size: 14px;
+  z-index: 1000;
   transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
 }
 
@@ -777,6 +778,7 @@ body.dark-mode section {
 #dark-mode-toggle:active {
   transform: scale(0.95);
 }
+*/
 
 body.dark-mode .video-gallery {
   background-color: #1e1e2f; /* Dark background */
